@@ -1,0 +1,14 @@
+version: '3'
+
+services:
+    redis_server:
+        build:
+            context: ./redis_server
+        volumes:
+            - ~/storage/redis:/data
+    app_server:
+        build:
+            context: ./app_server
+        command: tail -f /dev/null
+        volumes:
+            - ./app_server/app:/usr/local/app
