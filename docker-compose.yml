@@ -5,7 +5,7 @@ services:
         build:
             context: ./redis_server
         volumes:
-            - ~/storage/redis:/data
+            - ./redis_server/data:/data
     app_server:
         build:
             context: ./app_server
