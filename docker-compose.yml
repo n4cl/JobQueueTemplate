@@ -12,3 +12,5 @@ services:
         command: tail -f /dev/null
         volumes:
             - ./app_server/app:/usr/local/app
+        links:
+            - redis_server
